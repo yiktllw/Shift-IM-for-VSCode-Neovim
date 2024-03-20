@@ -18,3 +18,6 @@
 - Add configurations to set `WParam` and `lParam` for `WM_IME_CONTROL`
 - Add `shiftIm.debug`(*Shift IM: Debug*) command which will help you set Params.
 
+## [0.0.7]
+- Fix `command 'shiftIM.debug' not found` Error.
+

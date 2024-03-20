@@ -2,7 +2,7 @@
   "name": "shift-im-for-math",
   "displayName": "Shift IM for Math",
   "description": "An extension for automatically shift IM(Input Method) mode. Make it easier to input LaTeX in VSCode.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "keywords": [
     "input method",
     "latex",
@@ -83,6 +83,6 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "ffi-napi": "^4.0.3"
+    "koffi": "^2.6.6"
   }
 }
