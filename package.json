@@ -1,12 +1,13 @@
 {
-  "name": "shift-im-for-math",
-  "displayName": "Shift IM for Math",
-  "description": "An extension for automatically shift IM(Input Method) mode. Make it easier to input LaTeX in VSCode.",
-  "version": "0.0.7",
+  "name": "shift-im-for-vscode-neovim",
+  "displayName": "Shift IM for VSCode Neovim",
+  "description": "An extension for automatically shift IM(Input Method) mode. Make it easier to input LaTeX and interactive with vscode-neovim in VSCode.",
+  "version": "0.0.8",
   "keywords": [
     "input method",
     "latex",
-    "markdown"
+    "markdown",
+    "neovim"
   ],
   "os": [
     "win32"
@@ -65,7 +66,7 @@
   ],
   "main": "./src/extension.js",
   "extensionDependencies": [
-    "yfzhao.hscopes-booster"
+    "asvetliakov.vscode-neovim"
   ],
   "scripts": {
     "lint": "eslint .",
