@@ -30,7 +30,6 @@ function activate(context) {
             currentMode = nvim.getMode();
             // 如果当前由insert切换到normal，则将输入法设为英文，并将未切换时的输入法状态记住。
             // 如果当前(已经切换模式)是insert模式，则将输入法设为之前记住的状态，并执行一次:根据上下文切换状态。
-            // vscode.window.showInformationMessage("Your Mode Changed!")
             if (currentMode != "insert") {
                 if (previousMode == "insert" && !hscopes.getScopeAt(activeEditor.document, activeEditor.selection.active)) {
                     lastLParam = imcController(getWParam, 0);
@@ -46,7 +45,6 @@ function activate(context) {
                 const position = activeEditor.selection.active;
                 // 调用 toggleImeCondition 并传递文档和位置
                 toggleImeCondition(document, position, true, doNotSwitchToCN_);
-                // vscode.window.showInformationMessage("insert mode toggle");
             }
             previousMode = currentMode;
         }
@@ -96,13 +94,16 @@ function imcController(wParam, lParam) {
  * @param {vscode.Position} position 
  */
 function toggleImeCondition(document, position, strong = false, doNotSwithToCN = false) {
-    // Get scope
-    const scope = hscopes.getScopeAt(document, position);
     if (nvim.getMode() != "insert") {
         imcController(setWParam, enLParam);
         return;
     }
     // If ( scope not change ) return;
+    if (document.languageId != 'latex' && document.languageId != 'markdown'){
+        return;
+    }
+    // Get scope
+    const scope = hscopes.getScopeAt(document, position);
     currentInMath = scope;
     if (currentInMath === previousInMath && !strong) {
         return;

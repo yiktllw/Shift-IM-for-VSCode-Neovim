@@ -2,7 +2,7 @@
   "name": "shift-im-for-vscode-neovim",
   "displayName": "Shift IM for VSCode Neovim",
   "description": "An extension for automatically shift IM(Input Method) mode. Make it easier to input LaTeX and interactive with vscode-neovim in VSCode.",
-  "version": "0.0.8",
+  "version": "0.0.8-b",
   "keywords": [
     "input method",
     "latex",
@@ -62,7 +62,8 @@
   "icon": "images/icon.ico",
   "activationEvents": [
     "onLanguage:markdown",
-    "onLanguage:latex"
+    "onLanguage:latex",
+    "onStartupFinished"
   ],
   "main": "./src/extension.js",
   "extensionDependencies": [

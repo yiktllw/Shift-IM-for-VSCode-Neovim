@@ -6,7 +6,7 @@
 
 使用效果预览:
 
-<img src=./images/演示.gif width=75% />
+<img src='./images/test.gif' width=75% />
 
 ---------------
 
